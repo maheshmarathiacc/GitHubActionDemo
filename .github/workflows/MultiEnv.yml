@@ -10,7 +10,7 @@ on:
 jobs:
  
   Logintodockerhub-Dev:
-    runs-on: [self-hosted,windows]
+    runs-on: ubuntu-latest
     environment: Dev
     steps:
       - uses: actions/checkout@v3
@@ -22,7 +22,7 @@ jobs:
           password: ${{ secrets.DOCKERHUBPASSWORD }}
  
   Logintodockerhub-QA:
-    runs-on: [self-hosted,windows]
+    runs-on: ubuntu-latest
     environment: Qa
     steps:
       - uses: actions/checkout@v3
