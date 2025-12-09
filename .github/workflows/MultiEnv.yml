@@ -1,4 +1,5 @@
 name: CI
+
  
 on:
   push:
@@ -15,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Docker Login (Dev)
-        uses: docker/login-action@v2.1.0
+        uses: docker/login-action@v3.6.0
         with:
           registry: registry-1.docker.io
           username: ${{ secrets.DOCKERHUBUSERNAME }}
@@ -27,7 +28,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Docker Login (QA)
-        uses: docker/login-action@v2.1.0
+        uses: docker/login-action@3.6.0
         with:
           registry: registry-1.docker.io
           username: ${{ secrets.DOCKERHUBUSERNAME }}
